@@ -12,14 +12,9 @@ namespace Metro_system.Controllers
 {
     public class TestController : Controller
     {
-        //private static Log Log = new Log(typeof(TestController));
         // GET: Test
         public string Index()
         {
-            //Log.Error("111111111111111111111111111111111111111111111111111111");
-            //var dict = SubWayOperation.GetSubway("汉城路", "会展中心");
-
-            //return dict.First().Key;
             return "111";
         }
     }

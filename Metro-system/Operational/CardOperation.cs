@@ -52,5 +52,18 @@ namespace Metro_system.Operational
             }
             return resultList[0];
         }
+
+        public static void DestroyCard(string cardId)
+        {
+            try
+            {
+                MongoOperation.RemoveDocument(MongoCollectionName.Cards, new Dictionary<string, string> { { "CardId", cardId } });
+            }
+            catch(Exception e)
+            {
+                Log.Error("删除公交卡失败", e);
+                throw e;
+            }
+        }
     }
 }

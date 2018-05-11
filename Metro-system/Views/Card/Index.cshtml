@@ -1,0 +1,46 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    Styles.Render("~/Content/CardCss/Index.css");
+    ViewBag.Title = "公交卡信息";
+}
+@model Metro_system.Models.CardViewModel
+
+
+@{
+    if (Model == null)
+    {
+        <h1 class="text-center">请先创建您的公交卡</h1>
+    }
+    else
+    {
+        <div class="container" id="tbContainer">
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-hover">
+                        <tr>
+                            <th>公交卡ID:</th>
+                            <td>@Model.CardId</td>
+                        </tr>
+                        <tr>
+                            <th>公交卡余额:</th>
+                            <td>@Model.CardBalance</td>
+                        </tr>
+                        <tr>
+                            <th>公交卡类型:</th>
+                            <td>@Model.CardType</td>
+                        </tr>
+                        <tr>
+                            <th>公交卡状态:</th>
+                            <td>@Model.CardStatus</td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    }
+}
+
+
+
+
